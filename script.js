@@ -14,6 +14,8 @@ $(function() {
 
   var $itemsList = $("#items-list");
 
+  var $itemsTemplateDisplay = $(".items-template");
+
   // Model
 
   var items = [
@@ -29,7 +31,7 @@ $(function() {
       $itemsList.append($item);
   });
 
-  //my if/else condition seems to prevent database data from loading to the page because technically the submit field is empty while they're loading
+  // my if/else condition seems to prevent database data from loading to the page because technically the submit field is empty while they're loading
 
   $newItem.on('submit', function(event) {
     event.preventDefault();
@@ -60,6 +62,11 @@ $(function() {
     $('.item').each(function(index) {
       $(this).attr('data-index', index);
     });
+  });
+
+  $itemsTemplateDisplay.on("click", "li", function(){
+    var $listItem = $(this).closest(".item");
+    $listeItem.addClass("done"); //strikethrough method doesn't seem to be working
   });
 
 });
