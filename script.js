@@ -19,8 +19,8 @@ $(function() {
   // Model
 
   var items = [
-  {item: "Lettuce"},
-  {item: "Broccoli"},
+  {item: "Persimmons"},
+  {item: "Coconut Oil"},
   {item: "Truffles"}
   ];
 
